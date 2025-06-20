@@ -1,0 +1,108 @@
+/* ==UserStyle==
+@name           DeepSeek AI Chat
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A Dark Theme for DeepSeek Chat
+@author         PrasadM
+@preprocessor   default
+@advanced number side-bar-width "Sidebar menu width" 20
+@advanced color box-shadow-color "Box shadow color" #50f9ff
+@advanced number shadow-x "Shift Shadow on X axis" 0
+@advanced number shadow-y "Shift Shadow on Y axis" 0
+@advanced number blur-input "Blur amount for Shadow" 15
+@advanced number spread-input "Spread amount for Shadow" 5
+==/UserStyle== */
+@-moz-document url-prefix("https://chat.deepseek.com/") {
+	.dc04ec1d {
+		--local-sider-width: calc(var(--side-bar-width) * 1rem);
+	}
+	._62b4800 {
+		background-image: none !important;
+		background-color: transparent !important;
+		box-shadow: none !important;
+	}
+	div.d8ed659a {
+		transform: translateY(-8px) !important;
+		margin-bottom: -15px !important;
+	}
+	@keyframes scroll-wave {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	body {
+		overflow: hidden;
+	}
+
+	body[data-ds-dark-theme] {
+		background-color: rgb(var(--custom-bg-color));
+	}
+
+	body[data-ds-dark-theme],
+	body.dark .ds-theme {
+		--custom-bg-color: 30, 30, 30;
+		--dsr-bg: rgba(0, 0, 0, 0);
+		--wave-1-color: #fff;
+		--dsr-input-bg: rgb(29, 29, 29);
+		--dsr-side-bg: var(--dsr-input-bg);
+		--ds-rgb-bg-base: rgb(14, 14, 14);
+	}
+
+
+	/* ==== GLASS CHAT BUBBLES ==== */
+	.edb250b1,
+	.ds-markdown.ds-markdown--block {
+		background: rgba(0, 0, 0, 0.25) !important;
+		/* More transparent */
+		backdrop-filter: blur(20px) saturate(150%) !important;
+		/* Stronger blur */
+		-webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+		border-radius: 16px !important;
+		padding: 1.25rem !important;
+		margin: 0.75rem 0 !important;
+	}
+	/* ===== ENHANCED INPUT AREA ===== */
+	.dd442025 {
+		/* Input container */
+		background: rgba(0, 0, 0, 0.25) !important;
+		/* More transparent */
+		backdrop-filter: blur(20px) saturate(150%) !important;
+		/* Stronger blur */
+		-webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+	}
+	._77cefa5 {
+		/* 		box-shadow: #50f9ff 0px 0px 15px 5px; */
+		box-shadow: var(--box-shadow-color) calc(var(--shadow-x) * 1px) calc(var(--shadow-y) * 1px) calc(var(--blur-input) * 1px) calc(var(--spread-input) * 1px);
+	}
+	._0fcaa63 {
+		animation: blink-glow 2s infinite;
+	}
+
+	@keyframes blink-glow {
+		0%,
+		100% {
+			color: inherit;
+		}
+		50% {
+			color: #ff5050;
+		}
+	}
+	.e066abb8 svg {
+		animation: svg-flash 2s linear infinite;
+	}
+
+	@keyframes svg-flash {
+		0%,
+		100% {
+			fill: currentColor;
+		}
+		50% {
+			fill: #50f9ff;
+			filter: drop-shadow(0 0 8px #fff);
+		}
+	}
+}
