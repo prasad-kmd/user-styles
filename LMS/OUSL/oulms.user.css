@@ -1,0 +1,1073 @@
+/* ==UserStyle==
+@name           Modern Theme for OULMS
+@namespace      PrasadM
+@version        1.1.0
+@description    `Ultimate Theme for OULMS`
+@author         PrasadM (https://github.com/prasad-kmd)
+@license        CC BY-NC-SA 4.0
+@homepageURL    https://github.com/prasad-kmd/user-styles
+@supportURL     https://prasad-kmd.blogspot.com
+@advanced color login-bg "Login BG Color" rgba(30, 30, 30, 0.9)
+@advanced color login-accent "Accent Color" #50f9ff
+@advanced number login-blur "Blur Intensity (px)" 12 "min" 0 "max" 50
+@advanced color navbar-bg "Navbar Background" rgba(20, 20, 20, 0.25)
+@advanced color accent-color "Accent Color" #50f9ff
+@advanced number blur-intensity "Blur Intensity" 10
+==/UserStyle== */
+@-moz-document url-prefix("https://oulms.ou.ac.lk/") {
+	@import url('https://fonts.cdnfonts.com/css/nevermind-serif');
+	@import url('https://fonts.cdnfonts.com/css/rogan');
+	h1,
+	.block_myprofile .myprofileitem.fullname,
+	.navbar-bootswatch a .usertext {
+		font-family: 'NeverMind Serif', sans-serif;
+	}
+	body {
+		font-family: 'Rogan', sans-serif;
+	}
+}
+@-moz-document url-prefix("https://oulms.ou.ac.lk/login/index.php") {
+	.login-container {
+		background: rgba(30, 30, 30, 0.8);
+		/* Semi-transparent dark */
+		backdrop-filter: blur(12px);
+		/* Frosted glass effect */
+		border-radius: 16px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		/* Subtle border */
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+		inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+		padding: 2.5rem;
+		max-width: 400px;
+		margin: 2rem auto;
+		color: #fff;
+	}
+	.login-container .login-identityproviders .login-identityprovider-btn {
+		background: rgba(40, 40, 40, 0.7);
+		backdrop-filter: blur(8px);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		border-radius: 12px;
+		padding: 14px 20px;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		width: 100%;
+		margin-bottom: 12px;
+		transition: all 0.3s ease;
+		cursor: pointer;
+	}
+
+	.login-container .login-identityproviders .login-identityprovider-btn:hover {
+		background: rgba(60, 60, 60, 0.8);
+		border-color: rgba(255, 255, 255, 0.2);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	}
+
+	.login-container .login-identityproviders .login-identityprovider-btn:active {
+		transform: translateY(0);
+	}
+	#yui_3_17_2_1_1750449579783_22 > div.login-identityproviders > a > img {
+		width: fit-content;
+	}
+	#page-footer {
+		display: none;
+	}
+	body.pagelayout-login #page {
+		background-image: url(https://images.unsplash.com/photo-1709626011485-6fe000ea2dbc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+		background-size: cover;
+		background-attachment: fixed;
+	}
+}
+@-moz-document url-prefix("https://iam.ou.ac.lk:8443/") {
+	.login-pf body {
+		background: url("https://images.unsplash.com/photo-1654263391025-4c4809a37f5c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center !important;
+		background-size: cover !important;
+		background-attachment: fixed;
+	}
+	.card-pf {
+		background: rgba(30, 30, 30, .6);
+		backdrop-filter: blur(12px);
+		border-radius: 16px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		padding: 2.5rem;
+		max-width: 420px;
+		margin: 0 auto;
+	}
+
+	.login-pf-header h1 {
+		color: #fff;
+		font-size: 1.8rem;
+		text-align: center;
+		margin-bottom: 2rem;
+		font-weight: 500;
+		letter-spacing: -0.5px;
+		background: linear-gradient(90deg, #50f9ff, #a450ff);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.pf-c-form__label {
+		color: rgba(255, 255, 255, 0.8);
+		margin-bottom: 0.5rem;
+		display: block;
+		font-size: 0.9rem;
+	}
+
+	.pf-c-form-control {
+		background: rgba(20, 20, 20, 0.8);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		color: #fff;
+		padding: 12px 16px;
+		border-radius: 8px;
+		width: 100%;
+		transition: all 0.3s ease;
+	}
+
+	.pf-c-form-control:focus {
+		outline: none;
+		border-color: #50f9ff;
+		box-shadow: 0 0 0 2px rgba(80, 249, 255, 0.2);
+	}
+
+	.pf-c-input-group {
+		position: relative;
+		display: flex;
+	}
+
+	.pf-c-input-group .pf-c-form-control {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border-right: none;
+	}
+
+	.pf-c-input-group .pf-m-control {
+		background: rgba(30, 30, 30, 0.8);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-left: none;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		color: rgba(255, 255, 255, 0.7);
+		padding: 0 16px;
+		transition: all 0.3s ease;
+	}
+
+	.pf-c-input-group .pf-m-control:hover {
+		background: rgba(50, 50, 50, 0.8);
+		color: #50f9ff;
+	}
+	.login-pf-settings a {
+		color: rgba(80, 249, 255, 0.8);
+		text-decoration: none;
+		font-size: 0.85rem;
+		transition: all 0.2s ease;
+	}
+
+	.login-pf-settings a:hover {
+		color: #50f9ff;
+		text-decoration: underline;
+	}
+	.pf-c-button.pf-m-primary {
+		background: linear-gradient(135deg, #50f9ff, #a450ff);
+		border: none;
+		color: #111;
+		padding: 14px;
+		border-radius: 8px;
+		font-weight: 600;
+		width: 100%;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-top: 1.5rem;
+	}
+
+	.pf-c-button.pf-m-primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 20px rgba(80, 249, 255, 0.3);
+	}
+
+	.pf-c-button.pf-m-primary:active {
+		transform: translateY(0);
+	}
+	@media (max-width: 480px) {
+		.card-pf {
+			padding: 1.5rem;
+			margin: 0 1rem;
+		}
+
+		.login-pf-header h1 {
+			font-size: 1.5rem;
+		}
+	}
+	.fa-eye,
+	.fa-eye-slash {
+		transition: all 0.3s ease;
+	}
+
+	.pf-m-control:hover .fa-eye {
+		color: #50f9ff;
+		transform: scale(1.1);
+	}
+}
+@-moz-document url-prefix("https://oulms.ou.ac.lk/") {
+	body {
+		background: url("https://images.unsplash.com/photo-1654263391025-4c4809a37f5c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center !important;
+		background-size: cover !important;
+		background-attachment: fixed !important;
+		background-position: center;
+	}
+	/* Navbar container */
+	.navbar.fixed-top {
+		background-color: #1a1a1a;
+		/* Dark background for the navbar */
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+		/* More pronounced shadow for depth on dark background */
+		border-bottom: 1px solid #2a2a2a;
+		/* Darker border at the bottom */
+		padding: 0.5rem 1rem;
+		/* Consistent padding */
+		min-height: 56px;
+		/* Ensure a minimum height */
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		/* Space out content */
+		width: 100%;
+		z-index: 1030;
+		/* Ensure it stays on top */
+	}
+
+	/* Navbar brand (logo) */
+	.navbar-brand {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+		color: #e0e0e0;
+		/* Lighter text for brand */
+		font-weight: 600;
+		font-size: 1.25rem;
+	}
+
+	.navbar-brand .logo {
+		height: 40px;
+		border-radius: 6px;
+		object-fit: contain;
+		margin-right: 0.5rem;
+		animation: rainbow-glow 3s linear infinite;
+		transition: all 0.3s ease;
+	}
+
+	@keyframes rainbow-glow {
+		0% {
+			filter: drop-shadow(0 0 6px #ff0000);
+		}
+		16% {
+			filter: drop-shadow(0 0 8px #ff7b00);
+		}
+		32% {
+			filter: drop-shadow(0 0 10px #ffff00);
+		}
+		48% {
+			filter: drop-shadow(0 0 8px #00ff00);
+		}
+		64% {
+			filter: drop-shadow(0 0 6px #0000ff);
+		}
+		80% {
+			filter: drop-shadow(0 0 8px #4b0082);
+		}
+		100% {
+			filter: drop-shadow(0 0 6px #ee82ee);
+		}
+	}
+
+	/* Optional: Add scaling effect on hover */
+	.navbar-brand:hover .logo {
+		transform: scale(1.05);
+		animation: rainbow-glow 1.5s linear infinite;
+	}
+
+	/* User navigation and right-aligned elements */
+	#usernavigation {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		/* Push to the right */
+	}
+
+	/* Divider between sections */
+	.divider {
+		width: 1px;
+		height: 30px;
+		/* Adjust height for visual balance */
+		background-color: #333333;
+		/* Darker grey for the divider */
+		margin: 0 0.75rem;
+		/* Spacing around the divider */
+		border: none;
+		/* Remove default border from original class */
+	}
+
+	/* Popover regions (notifications and messages) */
+	.popover-region-notifications,
+	.popover-region-messages {
+		position: relative;
+		/* For positioning the popover content */
+	}
+
+	.popover-region-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.5rem 0.75rem;
+		/* Padding for click area */
+		color: #b0b0b0;
+		/* Light grey for icons */
+		text-decoration: none;
+		border-radius: 8px;
+		/* Rounded corners for the toggle buttons */
+		transition: background-color 0.2s ease, color 0.2s ease;
+		/* Smooth transitions */
+		min-width: 44px;
+		/* Ensure minimum touch target size */
+		min-height: 44px;
+		/* Ensure minimum touch target size */
+	}
+
+	.popover-region-toggle:hover,
+	.popover-region-toggle:focus {
+		background-color: #2a2a2a;
+		/* Slightly lighter dark background on hover/focus */
+		color: #5d9cec;
+		/* A vibrant blue for icons on hover/focus */
+		outline: none;
+		/* Remove default outline */
+	}
+
+	.popover-region-toggle .icon {
+		font-size: 1.25rem;
+		/* Larger icons */
+		line-height: 1;
+		/* Align vertically */
+	}
+
+	.popover-region-toggle .count-container {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		background-color: #dc3545;
+		/* Red for notifications (remains visible on dark) */
+		color: #fff;
+		font-size: 0.75rem;
+		font-weight: 600;
+		border-radius: 50%;
+		padding: 2px 6px;
+		min-width: 20px;
+		text-align: center;
+		line-height: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: scale(0.9);
+		/* Slightly smaller badge */
+		transform-origin: top right;
+		opacity: 0.9;
+	}
+
+	.popover-region-toggle .count-container.hidden {
+		display: none;
+	}
+
+	/* Popover content container (hidden by default) */
+	.popover-region-container {
+		/* 		background-color: #242424; */
+		/* Darker background for popovers */
+		border-radius: 12px;
+		/* More rounded corners for popovers */
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+		/* Stronger shadow for dark theme */
+		position: absolute;
+		top: calc(100% + 10px);
+		/* Position below the toggle */
+		right: 0;
+		width: 320px;
+		/* Fixed width for popover */
+		max-width: 90vw;
+		/* Responsive max-width */
+		overflow: hidden;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(10px);
+		transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+		z-index: 1000;
+		/* Ensure it's above other content */
+		border: 1px solid #333333;
+		/* Subtle border for definition */
+	}
+
+	.popover-region-container[aria-expanded="true"] {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	/* Popover header */
+	.popover-region-header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 1.25rem;
+		border-bottom: 1px solid #333333;
+		/* Darker separator */
+		background-color: #2a2a2a;
+		/* Slightly lighter dark header background */
+	}
+
+	.popover-region-header-text {
+		margin: 0;
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: #e0e0e0;
+		/* Light text for header */
+	}
+
+	.popover-region-header-actions a {
+		color: #909090;
+		/* Lighter grey for actions */
+		margin-left: 0.75rem;
+		font-size: 1.1rem;
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	.popover-region-header-actions a:hover {
+		color: #5d9cec;
+		/* Vibrant blue on hover */
+	}
+
+	/* Popover content area */
+	.popover-region-content-container {
+		/* 		padding: 1rem 1.25rem; */
+		/* 		max-height: 300px; */
+		/* Max height for scrollable content */
+		overflow-y: auto;
+		/* Enable scrolling */
+		-webkit-overflow-scrolling: touch;
+		/* Smooth scrolling on iOS */
+		color: #c0c0c0;
+		/* Light text for content */
+	}
+
+	.empty-message {
+		text-align: center;
+		padding: 1.5rem 0;
+		color: #888888;
+		/* Slightly darker grey for empty message */
+		font-style: italic;
+	}
+
+	.loading-icon {
+		display: none;
+		/* Hide by default, show when loading */
+		text-align: center;
+		padding: 1rem;
+		color: #5d9cec;
+		/* Vibrant blue for loading icon */
+	}
+
+	/* Popover footer (See all link) */
+	.popover-region-footer-container {
+		border-top: 1px solid #333333;
+		/* Darker border */
+		/* 		padding: 0.75rem 1.25rem; */
+		text-align: center;
+		background-color: #2a2a2a;
+		/* Matches header background */
+	}
+
+	.see-all-link {
+		text-decoration: none;
+		color: #5d9cec;
+		/* Vibrant blue for links */
+		font-weight: 500;
+		transition: color 0.2s ease;
+	}
+
+	.see-all-link:hover {
+		color: #4a8bd1;
+		/* Slightly darker blue on hover */
+	}
+
+	/* User menu container */
+	.usermenu-container {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
+	.usermenu .action-menu-trigger .dropdown {
+		position: relative;
+		height: 100%;
+		/* Occupy full height */
+	}
+
+	.usermenu .nav-link.dropdown-toggle {
+		display: flex;
+		align-items: center;
+		padding: 0.5rem 0.75rem;
+		color: #e0e0e0;
+		/* Light text */
+		text-decoration: none;
+		border-radius: 8px;
+		transition: background-color 0.2s ease, color 0.2s ease;
+		height: 100%;
+		/* Make the clickable area fill the height */
+	}
+
+	.usermenu .nav-link.dropdown-toggle:hover,
+	.usermenu .nav-link.dropdown-toggle:focus {
+		background-color: #2a2a2a;
+		/* Darker hover background */
+		color: #5d9cec;
+		/* Vibrant blue on hover */
+		outline: none;
+	}
+
+	.usermenu .userbutton {
+		display: flex;
+		align-items: center;
+	}
+
+	.usermenu .usertext {
+		font-weight: 500;
+		margin-right: 0.5rem;
+		color: #e0e0e0;
+		/* Light text */
+	}
+
+	.usermenu .userpicture {
+		width: 38px;
+		/* Slightly larger avatar */
+		height: 38px;
+		border-radius: 50%;
+		/* Circular avatar */
+		object-fit: cover;
+		border: 2px solid #333333;
+		/* Darker subtle border around avatar */
+		transition: border-color 0.2s ease;
+	}
+
+	.usermenu .nav-link.dropdown-toggle:hover .userpicture {
+		border-color: #5d9cec;
+		/* Highlight avatar border on hover */
+	}
+
+	.usermenu .caret {
+		border-top-color: #b0b0b0;
+		/* Lighter caret */
+		margin-left: 0.5rem;
+		transition: transform 0.2s ease;
+	}
+
+	.usermenu .nav-link.dropdown-toggle[aria-expanded="true"] .caret {
+		transform: rotate(180deg);
+		/* Rotate caret when menu is open */
+	}
+
+	/* User dropdown menu */
+	.dropdown-menu {
+		background-color: #242424;
+		/* Darker background for dropdown menu */
+		border: 1px solid #333333;
+		/* Subtle border */
+		border-radius: 12px;
+		/* Match popover rounding */
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+		/* Stronger shadow */
+		padding: 0.5rem 0;
+		/* Adjust padding */
+		min-width: 180px;
+		/* Minimum width for the menu */
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(10px);
+		transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+		z-index: 1000;
+	}
+
+	.dropdown-menu.show {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	.dropdown-item {
+		display: flex;
+		align-items: center;
+		padding: 0.75rem 1.25rem;
+		/* Ample padding for items */
+		color: #c0c0c0;
+		/* Light grey text */
+		text-decoration: none;
+		transition: background-color 0.2s ease, color 0.2s ease;
+		white-space: nowrap;
+		/* Prevent text wrapping */
+	}
+
+	.dropdown-item:hover,
+	.dropdown-item:focus {
+		background-color: #2a2a2a;
+		/* Darker highlight on hover */
+		color: #e0e0e0;
+		/* Brighter text on hover */
+		outline: none;
+	}
+
+	.dropdown-item .menu-action-text {
+		margin-left: 0.75rem;
+		/* Space for potential icons if added */
+		flex-grow: 1;
+		/* Allow text to take available space */
+	}
+
+	.dropdown-divider {
+		border-top: 1px solid #333333;
+		/* Darker divider line */
+		margin: 0.5rem 0;
+		/* Spacing around dividers */
+		height: 0;
+		/* Remove default height */
+		overflow: hidden;
+		/* Hide filler span */
+	}
+
+	/* Responsive adjustments */
+	@media (max-width: 767.98px) {
+		.navbar.fixed-top {
+			padding: 0.5rem 0.75rem;
+			/* Smaller padding on small screens */
+		}
+
+
+		.popover-region-toggle {
+			padding: 0.4rem 0.6rem;
+		}
+
+		.usermenu .nav-link.dropdown-toggle {
+			padding: 0.4rem 0.6rem;
+		}
+
+		.usermenu .userpicture {
+			width: 32px;
+			height: 32px;
+		}
+
+		.usermenu .usertext {
+			display: none;
+			/* Hide username on small screens to save space */
+		}
+	}
+
+	/* Ensure Font Awesome icons are styled correctly */
+	.icon.fa {
+		font-family: 'FontAwesome';
+		/* Make sure Font Awesome is linked in your HTML */
+	}
+	#page-footer {
+		background-color: #0009 !important;
+		backdrop-filter: blur(10px);
+	}
+	#region-main {
+		padding: 0 !important;
+	}
+}
+
+/* 	--------------------------------------------------------------- */
+@-moz-document url-prefix("https://oulms.ou.ac.lk/my/") {
+	.card {
+		background-color: transparent;
+		border: none;
+	}
+	.card-body {
+		background-color: #fffc;
+		backdrop-filter: blur(7.5px);
+		/* White background for the card */
+		border-radius: 12px;
+		/* Rounded corners for the card */
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+		/* Enhanced shadow for a "lifted" feel */
+		/* 		padding: 24px; */
+		/* Ample padding inside the card */
+		border: 1px solid #e0e0e0;
+		/* Subtle light border */
+		transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		/* Smooth transition for interactivity */
+	}
+
+	/* Adding a subtle hover effect to the card body */
+	.card-body:hover {
+		transform: translateY(-3px);
+		/* Lift the card slightly on hover */
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+		/* More pronounced shadow on hover */
+	}
+
+	/* Flexbox utilities - enhancing existing Bootstrap-like classes for consistent light theme appearance */
+	.d-flex {
+		display: flex;
+	}
+
+	.align-items-center {
+		align-items: center;
+	}
+
+	.flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	.mr-auto {
+		margin-right: auto;
+	}
+
+	.ml-auto {
+		margin-left: auto;
+	}
+
+	.flex-shrink-0 {
+		flex-shrink: 0;
+	}
+
+	/* Page context header - containing the main title */
+	.page-context-header {
+		margin-bottom: 20px;
+		/* Space below the header */
+	}
+
+	.page-header-headings h1 {
+		font-size: 2rem;
+		/* Large, prominent heading */
+		font-weight: 700;
+		/* Bold text */
+		color: #333333;
+		/* Dark color for the heading */
+		margin: 0;
+		/* Remove default margin */
+		padding: 0;
+		/* Remove default padding */
+		letter-spacing: -0.02em;
+		/* Slightly tighter letter spacing */
+	}
+
+	/* Header actions container - if there are any actions here */
+	.header-actions-container {
+		/* Style this if content is added, e.g., for buttons or icons */
+		display: flex;
+		/* Ensure it behaves as a flex container for its children */
+		gap: 10px;
+		/* Space between action items */
+	}
+
+	/* Page navigation (breadcrumbs) */
+	#page-navbar {
+		margin-bottom: 20px;
+		/* Space below breadcrumbs */
+		width: 100%;
+		/* Ensure breadcrumbs take full width */
+	}
+
+	.breadcrumb {
+		background-color: transparent;
+		/* Transparent background for breadcrumbs */
+		padding: 0;
+		/* Remove default padding */
+		margin: 0;
+		/* Remove default margin */
+		display: flex;
+		/* Use flex for breadcrumb items */
+		align-items: center;
+		list-style: none;
+		/* Remove default list styling */
+		border-radius: 0;
+		/* No explicit border-radius on the breadcrumb container */
+	}
+
+	.breadcrumb-item {
+		font-size: 0.95rem;
+		/* Slightly smaller font for breadcrumbs */
+		color: #666666;
+		/* Muted color for non-active breadcrumbs */
+		display: flex;
+		align-items: center;
+	}
+
+	.breadcrumb-item a {
+		color: #007bff;
+		/* Primary blue for breadcrumb links */
+		text-decoration: none;
+		transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+		/* Smooth transitions */
+		border-radius: 6px;
+		/* Subtle rounded corners for the link background */
+		padding: 4px 8px;
+		/* Padding for click area */
+		display: inline-block;
+		/* Allows transform to work properly */
+	}
+
+	.breadcrumb-item a:hover {
+		color: #0056b3;
+		/* Darker blue on hover */
+		background-color: #e9ecef;
+		/* Light background on hover */
+		transform: translateY(-1px);
+		/* Slight lift on hover */
+	}
+
+	.breadcrumb-item a:active {
+		transform: translateY(0);
+		/* Press down effect on click */
+		background-color: #dee2e6;
+	}
+
+	.breadcrumb-item + .breadcrumb-item::before {
+		content: '/';
+		/* Custom separator */
+		padding: 0 8px;
+		/* Spacing for separator */
+		color: #cccccc;
+		/* Light color for the separator */
+	}
+
+	.breadcrumb-item.active {
+		color: #333333;
+		/* Darker color for the active breadcrumb */
+		font-weight: 500;
+	}
+
+	/* Single button container */
+	.singlebutton {
+		margin-left: auto;
+		/* Pushes the button to the right */
+		display: flex;
+		/* Ensure inner form/button alignment */
+		align-items: center;
+	}
+
+	/* Customise this page button */
+	.btn.btn-secondary {
+		background-color: #f0f2f5;
+		/* Light background for the button */
+		color: #555555;
+		/* Dark grey text color */
+		border: 1px solid #ced4da;
+		/* Light border */
+		border-radius: 8px;
+		/* Rounded corners for the button */
+		padding: 10px 20px;
+		/* Ample padding */
+		font-size: 1rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+		/* Enhanced transitions */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		/* Subtle shadow */
+		outline: none;
+		/* Remove default outline */
+		position: relative;
+		/* For potential pseudo-elements or deeper effects */
+		overflow: hidden;
+		/* Hide overflow for hover effects */
+	}
+
+	.btn.btn-secondary:hover {
+		background-color: #e2e6ea;
+		/* Slightly darker background on hover */
+		border-color: #a8d1ff;
+		/* Light blue border on hover */
+		color: #0056b3;
+		/* Darker blue text on hover */
+		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+		/* Enhanced shadow on hover */
+		transform: translateY(-2px);
+		/* Slight lift on hover */
+	}
+
+	.btn.btn-secondary:focus {
+		border-color: #80bdff;
+		/* Focus ring color */
+		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+		/* Standard focus ring */
+		transform: translateY(-2px);
+		/* Keep lifted on focus */
+	}
+
+	.btn.btn-secondary:active {
+		background-color: #dae0e5;
+		/* Even darker on active */
+		border-color: #0056b3;
+		/* Stronger border on active */
+		transform: translateY(0);
+		/* Press down effect on click */
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		/* Smaller shadow on active */
+	}
+
+	/* Course header - if there are any additional elements here */
+	#course-header {
+		margin-top: 20px;
+		/* Space above the course header */
+		width: 100%;
+		/* Take full width */
+		color: #666666;
+		/* Muted text for this section */
+		/* Add specific styles if content is added here */
+	}
+
+	/* Ensure form elements within the button are properly hidden */
+	.singlebutton form {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		/* Allow the button to align correctly */
+	}
+
+	.singlebutton form input[type="hidden"] {
+		display: none;
+		/* Ensure hidden inputs don't affect layout */
+	}
+	#page-container-2 > div > div > div,
+	#page-container-2 > div > div,
+	#page-container-2 > div,
+	#page-container-2,
+	#yui_3_17_2_1_1750514951353_125 > div > div {
+		background-color: transparent !important;
+	}
+}
+@-moz-document url-prefix("https://oulms.ou.ac.lk/course/") {
+	.img-fluid {
+		/* Basic Responsive Image */
+		max-width: 100%;
+		height: auto;
+		display: block;
+		/* Prevents extra space below image */
+		/* Modern Enhancements */
+		border-radius: 8px;
+		/* Soft rounded corners */
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		/* Subtle shadow for depth */
+		object-fit: cover;
+		/* Ensures image covers area without distortion */
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		/* Smooth hover effects */
+		/* Optional: Add a slight border for better framing */
+		border: 1px solid rgba(0, 0, 0, 0.08);
+	}
+
+	/* Hover Effects (Optional) */
+	.img-fluid:hover {
+		transform: translateY(-2px);
+		/* Slight lift effect */
+		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+		/* Enhanced shadow on hover */
+	}
+
+	/* For images inside cards or containers (optional) */
+	.card .img-fluid {
+		border-radius: 8px 8px 0 0;
+		/* Rounded top only if inside a card */
+		box-shadow: none;
+		/* Remove shadow if card already has one */
+	}
+
+	/* Lazy-loading fade-in effect (if using lazy-load) */
+	.img-fluid.lazy {
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+
+	.img-fluid.lazy.loaded {
+		opacity: 1;
+	}
+	/* === Grid Section Card === */
+	.grid-section {
+		border: none;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+		background: #fff;
+		margin-bottom: 1.5rem;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.grid-section:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+	}
+
+	.grid-section-inner {
+		text-decoration: none;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	/* === Card Header === */
+	.card-header {
+		background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+		color: white;
+		padding: 1.25rem;
+		font-size: 1.1rem;
+		font-weight: 600;
+		border-bottom: none;
+		text-align: center;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	/* === Image Container === */
+	.card-img-bottom {
+		padding: 1.5rem;
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #f8f9fa;
+	}
+
+	.grid-image img {
+		max-height: 120px;
+		width: auto;
+		object-fit: contain;
+		filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+		transition: transform 1s ease;
+		transform-origin: center center;
+		/* Ensures scaling from the center */
+	}
+
+	.grid-section:hover .grid-image img {
+		transform: scale(1.005);
+		transform-origin: center center;
+		/* Uniform scaling */
+	}
+	/* === Responsive Adjustments === */
+	@media (max-width: 768px) {
+		.card-header {
+			font-size: 1rem;
+			padding: 1rem;
+		}
+
+		.card-img-bottom {
+			padding: 1rem;
+		}
+	}
+}
