@@ -1,0 +1,54 @@
+/* ==UserStyle==
+@name           www.mathgptpro.com/app/ask
+@namespace      github.com/prasad-kmd/user-styles
+@version        2.0.0
+@description    A new userstyle for MathosAI
+@author         prasad-kmd
+==/UserStyle== */
+@-moz-document url-prefix("https://www.mathgptpro.com/") {
+	@import url('https://fonts.cdnfonts.com/css/nevermind-serif');
+	@import url('https://fonts.cdnfonts.com/css/rogan');
+	h1,
+	.css-1aagr8j,
+	.css-15cu2gx,
+	.css-pmkx53,
+	.css-1toorgg,
+	.css-18wbqdu,
+	.css-1fneoxh,
+	.css-1pog434.Mui-disabled,
+	.css-ufwjxh .MuiInputBase-input {
+		font-family: 'NeverMind Serif', sans-serif;
+	}
+	body,
+	.css-cy9nnv {
+		font-family: 'Rogan', sans-serif;
+	}
+}
+@-moz-document url-prefix("https://www.mathgptpro.com/") {
+	/* Insert code here... */
+	.css-p6qq3f,
+	.css-puzhg0,
+	.css-ld752p,
+	.css-16c77hi,
+	.css-1cjjg7z,
+	.css-ybx6tp,
+	.css-1cr9tpf,
+	.css-1c4ujz8,
+	.css-1hk5uvc,
+	body > main > aside > div > div.MuiBox-root.mui-19hfw5s > div > div > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.mui-1hnc3u3,
+	body > main > aside > div > div.MuiBox-root.mui-19hfw5s > div > div > button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.mui-nreaci,
+	body > main > aside > div > div.MuiBox-root.mui-19hfw5s > div > div > div.MuiBox-root.mui-6c84nv,
+	#ask-page-scroll-container > div > div.w-full,
+	#MainWrapper > div > div.MuiBox-root.mui-1xjbiig > div.MuiBox-root.mui-awdaam,
+	#MainWrapper > div > div.MuiBox-root.mui-1xjbiig > div.MuiBox-root.mui-y5ki5b > div > div.MuiBox-root.mui-aodl5u > div.MuiBox-root.mui-70qvj9 > div:nth-child(3),
+	body > main > div > div.MuiBox-root.mui-1k8t7d9 > div > div.MuiBox-root.mui-145puxh > div.MuiBox-root.mui-e0zeh4 {
+		display: none;
+	}
+	.mui-1v7osym {
+    max-width: 100% !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: calc(5 * var(--mui-spacing));
+}
+}
